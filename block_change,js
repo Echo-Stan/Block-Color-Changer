@@ -1,0 +1,15 @@
+let colorBlock = document.querySelector(".block");
+let changeColorbtn = document.querySelector(".block-btn");
+let colorList = ["blue", "red", "purple", "green", "aqua"];
+let backgroundColorbtn = document.querySelector(".back-btn");
+let bodyColor = document.querySelector("body");
+currentlist = 1;
+changeColorbtn.addEventListener("click", (e) => {
+  colorBlock.style.backgroundColor = colorList[currentlist++];
+  if (currentlist == colorList.length) currentlist = 1;
+});
+
+backgroundColorbtn.addEventListener("click", (e) => {
+  bodyColor.style.backgroundColor = colorList[currentlist++];
+  if (currentlist == colorList.length) currentlist = 1;
+});
